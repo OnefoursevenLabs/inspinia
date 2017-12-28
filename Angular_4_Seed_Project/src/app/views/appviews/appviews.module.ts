@@ -1,12 +1,15 @@
-import {NgModule} from "@angular/core";
-import {BrowserModule} from "@angular/platform-browser";
-import {RouterModule} from "@angular/router";
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {RouterModule} from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
-import {StarterViewComponent} from "./starterview.component";
-import {LoginComponent} from "./login.component";
+import {StarterViewComponent} from './starterview.component';
+import {LoginComponent} from './login.component';
 
 import {PeityModule } from '../../components/charts/peity';
 import {SparklineModule } from '../../components/charts/sparkline';
+import { AngularOpenlayersModule } from 'ngx-openlayers';
 
 @NgModule({
   declarations: [
@@ -15,9 +18,12 @@ import {SparklineModule } from '../../components/charts/sparkline';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpModule,
     RouterModule,
     PeityModule,
-    SparklineModule
+    SparklineModule,
+    AngularOpenlayersModule
   ],
   exports: [
     StarterViewComponent,
